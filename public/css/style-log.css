@@ -1,0 +1,59 @@
+/* GENERAL */
+.full-width {
+    width: 100%;
+}
+.negru{
+    color: #000
+}
+
+
+.gantere{
+    position: absolute;
+    background-image: url(../images/barbells-dumbbells-equipment-669584.jpg);
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 0;
+}
+
+form{
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+#app{
+    background-color: #ffffff;
+}
+
+html{
+    background-color: #ffffff;
+}
+
+.navbar{
+    background-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.navbar-brand,
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
+    font-size: 35px;
+    color: #ffffff!important;
+}
+
+.btn.btn-primary{
+    background-color: #444444;
+    border-color: transparent;
+}
