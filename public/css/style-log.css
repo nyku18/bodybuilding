@@ -1,16 +1,42 @@
 /* GENERAL */
+
 .full-width {
     width: 100%;
 }
-.negru{
+
+.negru {
     color: #000
 }
 
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: white;
+}
 
-.gantere{
+html,
+body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+
+}
+
+/* login */
+
+.gantere {
     position: absolute;
     background-image: url(../images/barbells-dumbbells-equipment-669584.jpg);
-    height: 100%; 
+    height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +52,7 @@
     top: 0;
 }
 
-form{
+form {
     margin: auto;
     width: 100%;
     padding: 10px;
@@ -34,26 +60,44 @@ form{
     border-radius: 5px;
 }
 
-#app{
+#app {
     background-color: #ffffff;
 }
 
-html{
+html {
     background-color: #ffffff;
 }
 
-.navbar{
+.navbar {
     background-color: transparent;
     border-bottom-color: transparent;
 }
 
 .navbar-brand,
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
-    font-size: 35px;
-    color: #ffffff!important;
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-text {
+    color: #ffffff !important;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
     background-color: #444444;
     border-color: transparent;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -100PX;
+    margin-top: 15px;
+
+}
+
+.navbar-nav > li {
+    float: left;
+    margin-left: 20px;
 }
