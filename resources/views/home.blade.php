@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container top-contact">
+    <div class="row">
+        <div class="col-md-6 contact-stanga">
+            <i class="fas fa-address-card"></i> Sibiu, V.Milea P1
+            <i class="fas fa-phone"></i> 0765899425
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
