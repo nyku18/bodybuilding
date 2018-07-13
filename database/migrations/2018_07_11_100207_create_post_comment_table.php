@@ -13,14 +13,14 @@ class CreatePostCommentTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_comment', function (Blueprint $table) {
+        Schema::create('posts_comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_post')->unsigned();
             $table->integer('id_comment')->unsigned();
             $table->timestamps();
 			
-			$table->foreign('id_post')->references('id')->on('post');
-			$table->foreign('id_comment')->references('id')->on('comment');			
+			$table->foreign('id_post')->references('id')->on('posts');
+			$table->foreign('id_comment')->references('id')->on('comments');			
         });
     }
 
@@ -31,6 +31,6 @@ class CreatePostCommentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_comment');
+        Schema::dropIfExists('posts_comments');
     }
 }
