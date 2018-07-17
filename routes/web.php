@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +25,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/addpost', 'PostController@create');
 Route::post('/storepost', 'PostController@store');
 Route::get('/showpost', 'PostController@show');
+Route::get('/editpost', 'PostController@gotoeditpage');
+Route::post('/deletepost','PostController@delete');
+Route::post('/updatepost','PostController@update');
+
 
 
 //Route::resource('posts', 'PostController');

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\PostRepository;
-
+use App\Post as Post;
 
 
 
@@ -67,4 +67,30 @@ class PostController extends Controller
 
      }
 
+     public function gotoeditpage(Request $request)
+     {
+
+       $id =$request->all()['id'];
+        $post= $this->repository->getPostById($id);  
+    return view('/posts/editpost' , compact('post'));
+
+     }
+
+
+     public function update(Request $request, Post $post )
+     {     
+         $post= $this->repository->edit($request->all());
+    
+        return redirect('/showpost');
+
+     }
+
+
+
+     public function delete(Request $request)
+     {
+
+        $post= $this->repository->destroy($request->all()['id']);
+        return redirect('/showpost');
+     }
 }

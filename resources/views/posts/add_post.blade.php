@@ -12,16 +12,16 @@
 
   <div class="form-group">
 
-    <label for="Title">Title</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="title">
-
+    <label>Title</label>
+    <br>
+    <textarea name ="title" ></textarea>
   </div>
 
   <div class="form-group">
 
-    <label for="Body">Text</label>
-    <input type="text" class="form-control" id="Body" name = "body">
-
+    <label>Text</label>
+    <br>
+    <textarea name ="body" ></textarea>
   </div>
 
   <button type="submit" class="btn btn-primary">Publish</button>

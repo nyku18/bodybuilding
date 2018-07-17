@@ -2,31 +2,45 @@
 
 
 
-
 @section('content')
 
 
 
 	@foreach ($posts as $post)
 
+	<div style= "border : 5px solid violet">
 
-		<div style= "border: 1px solid blue">
-        
+
+			<div style= "border: 1px solid blue">
+				{{ csrf_field() }}
+        		{{ method_field('PATCH') }}
+
+					<a href= "{{ action('PostController@gotoeditpage','id='. $post->id) }}">
 
                 {{$post->title}}
 
-
-		</div>
-
+            		</a>
 
 
-		<div style="border :1px solid red">
+		    </div>
+
+
+
+		    <div style="border :1px solid red">
 
 
 				{{$post->body}}
 
 
-		</div>
+		    </div> 
+
+		<form method="post" action="{{action('PostController@delete', 'id=' . $post->id) }}">
+			{{ csrf_field() }}
+			
+			
+		 	<button type="submit" class="btn btn-primary">Delete</button>
+		</form>   
+	 </div>
 
 	<br>
 
