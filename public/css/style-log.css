@@ -92,7 +92,6 @@ html {
 
 .navbar-right {
     float: right !important;
-    margin-right: -100PX;
     margin-top: 15px;
 
 }
@@ -102,11 +101,73 @@ html {
     margin-left: 20px;
 }
 
+/*register*/
 
+.panel-default {
+    border-color: transparent;
+}
 
+.panel {
+    background-color: #fff;
+    border: none;
+    border-radius: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+    font-size: 30px;
+}
 
 
 
 /*home*/
 
+#app {
+    margin-top: -85px;
+}
 
+i {
+    color: black;
+}
+
+.padding-dreapta {
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.contact-stanga {
+    border-bottom: 1px solid #636b6f;
+}
+
+.navbar-default {
+    border-color: transparent;
+}
+
+.navbar {
+    background-color: #636b6f;
+    border-radius: 0px;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent;
+}
+
+.navbar-header {
+    margin-top: 15px;
+}
+
+.aligner {
+    padding-bottom: 15px;
+}
+
+
+.btn.active {
+    background: black;
+}
