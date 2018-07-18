@@ -24,10 +24,8 @@ class PostRepository {
     public function show()
     {
 
-		$posts = Post::orderBy('created_at', 'desc')->get();
+		$posts = Post::with('comments')->orderBy('created_at', 'desc')->get();
 		 return $posts;
-
-
     }
 
 

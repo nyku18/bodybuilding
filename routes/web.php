@@ -28,6 +28,8 @@ Route::get('/showpost', 'PostController@show');
 Route::get('/editpost', 'PostController@gotoeditpage');
 Route::post('/deletepost','PostController@delete');
 Route::post('/updatepost','PostController@update');
+Route::post('/addcomment','CommentController@gotocommentpage');
+Route::post('/storecomment','CommentController@store');
 
 
 

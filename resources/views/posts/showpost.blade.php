@@ -7,42 +7,69 @@
 
 
 	@foreach ($posts as $post)
-
-	<div style= "border : 5px solid violet">
-
-
-			<div style= "border: 1px solid blue">
-				{{ csrf_field() }}
+                
+                {{ csrf_field() }}
         		{{ method_field('PATCH') }}
 
-					<a href= "{{ action('PostController@gotoeditpage','id='. $post->id) }}">
-
-                {{$post->title}}
-
-            		</a>
+					
 
 
-		    </div>
+	 <a id="editpost" href= "{{ action('PostController@gotoeditpage','id='. $post->id) }}">
+
+        {{$post->title}}
+
+     </a>
+
+     <br>
+     <br>	
+		   
+
+	 <div class= "postbody">
+
+	     <div class = "text">
+          
+          {{$post->body}}
+
+		 </div> 
+		 
+		 <br>
+		 <br>
 
 
+	     <form method="post" action="{{action('PostController@delete', 'id=' . $post->id) }}" style= "display:inline">
+		    {{ csrf_field() }}
+		 
+		    <button type="submit" class="btn btn-primary">Delete</button>
+		 
+		 </form>   
 
-		    <div style="border :1px solid red">
-
-
-				{{$post->body}}
-
-
-		    </div> 
-
-		<form method="post" action="{{action('PostController@delete', 'id=' . $post->id) }}">
-			{{ csrf_field() }}
+         <form method="post" action="{{action('CommentController@gotocommentpage', 'id=' . $post->id) }}" style= "display:inline">
+		 {{ csrf_field() }}
 			
-			
-		 	<button type="submit" class="btn btn-primary">Delete</button>
-		</form>   
-	 </div>
+		 	<button type="submit" class="btn btn-primary">Comment</button>
+		 
+		 </form>
 
-	<br>
+		 <br>
+		 <br>
+
+	     <div class = "comments">
+	     	<h5>Comentarii:</h5>	
+			<ul>
+		     	@foreach($post->comments as $comment)
+		     		<li>{{$comment->body}}</li>
+		     	@endforeach
+			</ul>
+	     </div>
+
+
+
+
+	  </div>
+
+
+
+	  <br>
 
 	@endforeach
 

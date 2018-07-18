@@ -1,0 +1,28 @@
+.postbody
+{
+	
+}
+
+#editpost
+{
+	margin-left: 50px;
+	font-size: 50px;
+	border-bottom: 1px solid grey;
+	
+}
+
+#editpost:hover
+{
+	text-decoration: none;
+}
+
+.text 
+{
+	margin-left: 10px;
+	width:90%;
+}
+
+.comments
+{
+	
+}
